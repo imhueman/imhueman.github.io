@@ -1,0 +1,12 @@
+/*Pc*/
+@media (max-width: 990px) {
+    
+}
+/*IPad*/
+
+/*Mobile*/
+@media (max-width:740px){
+    #nav>li{
+        display: block;
+    }
+}
