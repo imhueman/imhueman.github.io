@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     font-family: Arial, sans-serif;
 }
 /*Common(dùng chung)*/
@@ -34,12 +35,17 @@ html{
 .col-full{
     width: 100%;
 }
+.mt-16{
+    margin-top: 16px;
+}
 .btn{
-    padding: 8px 16px;
+    padding: 15px 25px;
     background-color: black;
     display: inline-block;
     text-decoration: none;
     border: none;
+    text-align: center;
+    font-weight: bold;
 }
 .btn:hover{
     background-color: #cccccc;
@@ -58,7 +64,7 @@ html{
     right: 0;
     left: 0;
     z-index: 1; /*độ sâu. để header kh bị slider che*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 #nav{
     display: inline-block;
@@ -108,14 +114,21 @@ html{
 #nav .nav-icon-more{
     font-size: 13px;
 }
-#header .search-btn{
+#header .mobile-search-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .search-btn,
+#header .mobile-search-btn{
     float: right;
     color: white;
     line-height: 46px;
     padding: 0 21px;
-
 }
-#header .search-btn:hover{
+#header .search-btn:hover,
+#header .mobile-search-btn:hover{
     background-color: blue;
     color: white;
     cursor: pointer;
@@ -151,7 +164,8 @@ html{
 }
 #content .content-section{
     width: 800px;
-    padding: 64px 0 112px;
+    max-width: 100%;
+    padding: 64px 16px 112px;
     margin-left: auto;
     margin-right: auto;
 
@@ -410,9 +424,4 @@ html{
     margin:15px 0 ;
     color: gray;
     font-weight: bold;
-}
-
-
-@media (max-width : 800px) {
-
 }
